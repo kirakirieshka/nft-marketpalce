@@ -31,11 +31,11 @@ header {
   padding: 20px 50px;
 }
 
-.logo.box {
+.logo-box {
   display: flex;
   justify-content: center;
- align-items: center;
- gap: 10px;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
@@ -66,6 +66,12 @@ header {
   background-color: #a259ff;
 }
 
+.btn-sign-up:hover {
+  background-color: #ffb13b;
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
 .navigation {
   display: flex;
   gap: 10px;
@@ -87,7 +93,6 @@ header {
 .hero-section {
   display: flex;
   justify-content: center;
-  padding-top: 80px;
   padding: 80px 0 80px;
 }
 
@@ -107,6 +112,12 @@ header {
   font-weight: 600;
   line-height: 110%;
   text-transform: capitalize;
+}
+
+.hero-section-about h1:hover {
+  text-shadow: 10px 10px 20px #a259ff;
+  transition-property: text-shadow;
+  transition-duration: 2s;
 }
 
 .hero-section-about p {
@@ -132,6 +143,12 @@ header {
   font-weight: 600;
   line-height: 140%;
   cursor: pointer;
+}
+
+.btn-started:hover {
+  background-color: #ffb13b;
+  transition-property: background-color;
+  transition-duration: 2s;
 }
 
 .list-additional-info {
@@ -163,14 +180,14 @@ header {
   width: 510px;
 }
 
-.hero-section-placeholder img { 
-  border-radius: 20px 20px 0px 0px; 
+.hero-section-placeholder img {
+  border-radius: 20px 20px 0px 0px;
 }
 
 .placeholder-description {
   padding: 20px;
   border-radius: 0px 0px 20px 20px;
-  background-color:#3B3B3B;
+  background-color: #3b3b3b;
 }
 
 .placeholder-description h3 {
@@ -190,7 +207,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 1050px;
-  gap:30px;
+  gap: 30px;
   padding: 60px;
 }
 
@@ -201,22 +218,26 @@ header {
   margin-top: 10px;
 }
 
+.artist-avatar:hover {
+  transform: scale(1.4);
+}
+
 .nft-card {
   width: 330px;
 }
 
-.nft-cards-section {
-   background-color: #3B3B3B;
+.nft-card:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
-
 
 .nft-info {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 20px 30px 25px 30px;
-  background-color: #2B2B2B;
   border-radius: 0 0 20px 20px;
+  background-color: #2b2b2b;
 }
 
 .additional-info {
@@ -225,27 +246,64 @@ header {
 }
 
 .img-placeholder-card {
-   display:flex;
-}
-
-.price-title,
-.highest-bid-title {
-   color: #858584;
-   font-size: 12px;
-font-weight: 400;
-line-height: 110%; /* 13.2px */
+  display: flex;
 }
 
 .price,
 .highest-bid {
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.price-value, highest-bid-value {
- color:#FFF;
- font-size: 16px;
-font-weight: 400;
-line-height: 140%; /* 22.4px */
+.price-title,
+.highest-bid-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+  color: #858584;
+}
+
+.price-value,
+.highest-bid-value {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  color: #fff;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
